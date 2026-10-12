@@ -1,0 +1,265 @@
+{
+  "summary": {
+    "network": "sepolia",
+    "clubPointsToken": "0xC5A870AB5E317c82Ed962cCB1A95b7DAce4782DC",
+    "campusMemo": "0xa173e4E730DD46DED5a31964D4D5Dd6aCE9c89F9",
+    "tokenURIofToken0": "https://gist.githubusercontent.com/Nugsu/40b698a04166106f2223c2d13ddec1af/raw/campus-memo.json",
+    "cptTotalSupply": "695.0",
+    "rewardPool": "90.0",
+    "memoTotalSupply": "10",
+    "memoRemaining": "0",
+    "adminCptBalance": "100.0",
+    "aliceCptBalance": "55.0",
+    "bobCptBalance": "450.0",
+    "aliceRedeemed": "5.0",
+    "aliceNftBalance": "1",
+    "adminNftBalance": "9",
+    "checkedAt": "2026-10-11T16:11:45.589Z"
+  },
+  "results": [
+    {
+      "step": "S0",
+      "action": "Fund test wallets with gas ETH",
+      "detail": "0.004 ETH each"
+    },
+    {
+      "step": "S0a",
+      "txHash": "0x37908e72c5c1e7decea6de20334d2d1b2a6093d1bb71d22f3f39d56b0246d132",
+      "gasUsed": "204600",
+      "url": "https://sepolia.etherscan.io/tx/0x37908e72c5c1e7decea6de20334d2d1b2a6093d1bb71d22f3f39d56b0246d132"
+    },
+    {
+      "step": "S0b",
+      "txHash": "0x61decd1b2163c2923938b28a9ad04c564b8a6aa5394fe6da8dbbeff9d467d8ff",
+      "gasUsed": "204600",
+      "url": "https://sepolia.etherscan.io/tx/0x61decd1b2163c2923938b28a9ad04c564b8a6aa5394fe6da8dbbeff9d467d8ff"
+    },
+    {
+      "step": "S0c",
+      "txHash": "0x4a89d9e3f77a4954ae9c55336acbec6ef0f1923e7f08ac711a06b30595608797",
+      "gasUsed": "204600",
+      "url": "https://sepolia.etherscan.io/tx/0x4a89d9e3f77a4954ae9c55336acbec6ef0f1923e7f08ac711a06b30595608797"
+    },
+    {
+      "step": "S1",
+      "action": "Rule 1 - initial batch of 1000 CPT minted at deployment",
+      "detail": ""
+    },
+    {
+      "step": "S2",
+      "action": "Admin registers Alice as a club member"
+    },
+    {
+      "step": "S2",
+      "txHash": "0x1b782d57aa0e9046270ecf1ac776c8348dfd0600b45c3fd196c141e335cd0fbc",
+      "gasUsed": "129926",
+      "url": "https://sepolia.etherscan.io/tx/0x1b782d57aa0e9046270ecf1ac776c8348dfd0600b45c3fd196c141e335cd0fbc"
+    },
+    {
+      "step": "S3",
+      "action": "Custom #1 - Admin funds the check-in reward pool with 100 CPT"
+    },
+    {
+      "step": "S3",
+      "txHash": "0x7ec8804d2e15e6cc26f06b91d5deb47cb58965fbcedb486bc9d09a4efa9f62a2",
+      "gasUsed": "254429",
+      "url": "https://sepolia.etherscan.io/tx/0x7ec8804d2e15e6cc26f06b91d5deb47cb58965fbcedb486bc9d09a4efa9f62a2"
+    },
+    {
+      "step": "S4",
+      "action": "Custom #1 - Alice performs dailyCheckIn() and earns 10 CPT"
+    },
+    {
+      "step": "S4",
+      "txHash": "0x2ed406db2cb18bd9cdd9cec827736bbaa81219f5c81393c91cd9bdd703204eee",
+      "gasUsed": "269330",
+      "url": "https://sepolia.etherscan.io/tx/0x2ed406db2cb18bd9cdd9cec827736bbaa81219f5c81393c91cd9bdd703204eee"
+    },
+    {
+      "step": "S5",
+      "action": "Negative test - a second check-in within 24h must revert"
+    },
+    {
+      "step": "S5",
+      "expectedRevert": "already checked in today",
+      "actualRevert": "execution reverted: CPT: already checked in today",
+      "matched": true
+    },
+    {
+      "step": "S6",
+      "action": "Rule 2 - Admin mints 300 CPT to Bob"
+    },
+    {
+      "step": "S6",
+      "txHash": "0x95382b1fe55bd9fc85a86bc86b60c74ddc2c48351f68e65b5ee860649b8876bb",
+      "gasUsed": "144467",
+      "url": "https://sepolia.etherscan.io/tx/0x95382b1fe55bd9fc85a86bc86b60c74ddc2c48351f68e65b5ee860649b8876bb"
+    },
+    {
+      "step": "S7",
+      "action": "Rule 2 - Admin batch-distributes 150 CPT to Alice and 150 to Bob"
+    },
+    {
+      "step": "S7",
+      "txHash": "0x9199a6a9dfedc26f02e68f113c21897140591abe0abdfd9473061e33e51342ab",
+      "gasUsed": "66126",
+      "url": "https://sepolia.etherscan.io/tx/0x9199a6a9dfedc26f02e68f113c21897140591abe0abdfd9473061e33e51342ab"
+    },
+    {
+      "step": "S8",
+      "action": "Rule 2 - Negative test: Bob (non-admin) tries to mint and must revert"
+    },
+    {
+      "step": "S8",
+      "expectedRevert": "not an administrator",
+      "actualRevert": "execution reverted: CPT: caller is not an administrator",
+      "matched": true
+    },
+    {
+      "step": "S9",
+      "action": "Custom #2 - Alice voluntarily burns 5 CPT to request club withdrawal"
+    },
+    {
+      "step": "S9",
+      "txHash": "0xbbc3fd3e0f565a1ff10f7398ac352294c453db373ae1febd9959ec7ffae40d69",
+      "gasUsed": "156563",
+      "url": "https://sepolia.etherscan.io/tx/0xbbc3fd3e0f565a1ff10f7398ac352294c453db373ae1febd9959ec7ffae40d69"
+    },
+    {
+      "step": "S10",
+      "action": "NFT - Alice approves the CampusMemo contract to spend 100 CPT"
+    },
+    {
+      "step": "S10",
+      "txHash": "0x6afb55da7ccef898ddfff72d071c204547bdb387e04a7d7ce889da84d4551084",
+      "gasUsed": "128349",
+      "url": "https://sepolia.etherscan.io/tx/0x6afb55da7ccef898ddfff72d071c204547bdb387e04a7d7ce889da84d4551084"
+    },
+    {
+      "step": "S11",
+      "action": "NFT - Alice mints commemorative NFT #0 for 100 CPT"
+    },
+    {
+      "step": "S11",
+      "txHash": "0x4c051feea79058729d063945a83510fa8fe50de13b30d6c4a6fcea442384bea7",
+      "gasUsed": "829183",
+      "url": "https://sepolia.etherscan.io/tx/0x4c051feea79058729d063945a83510fa8fe50de13b30d6c4a6fcea442384bea7"
+    },
+    {
+      "step": "S12",
+      "action": "NFT - Negative test: minting without enough CPT must revert"
+    },
+    {
+      "step": "S12",
+      "expectedRevert": "not enough CPT",
+      "actualRevert": "execution reverted: CampusMemo: not enough CPT",
+      "matched": true
+    },
+    {
+      "step": "S13",
+      "action": "NFT - Negative test: commemorative NFT is soulbound (transfer must revert)"
+    },
+    {
+      "step": "S13a",
+      "txHash": "0xf81ed0ff6cad05d4952ee23ea4a91e08244067137a9157b1be80cdd835d686ec",
+      "gasUsed": "130721",
+      "url": "https://sepolia.etherscan.io/tx/0xf81ed0ff6cad05d4952ee23ea4a91e08244067137a9157b1be80cdd835d686ec"
+    },
+    {
+      "step": "S13b",
+      "expectedRevert": "non-transferable",
+      "actualRevert": "execution reverted: CampusMemo: commemorative NFTs are non-transferable",
+      "matched": true
+    },
+    {
+      "step": "S14",
+      "action": "NFT - Admin mints the remaining 9 commemorative NFTs (total supply reaches 10)"
+    },
+    {
+      "step": "S14a",
+      "txHash": "0xa6086e20ce1d458f9b77eb2f972a3b4f6145471af996efa4003fc36240fafe6b",
+      "gasUsed": "128349",
+      "url": "https://sepolia.etherscan.io/tx/0xa6086e20ce1d458f9b77eb2f972a3b4f6145471af996efa4003fc36240fafe6b"
+    },
+    {
+      "step": "S14-mint-2",
+      "txHash": "0xda886f7533d7a3b59a1b806f7b0be55e2f0f8c6267735d51d4e9f369d8b5dd20",
+      "gasUsed": "742879",
+      "url": "https://sepolia.etherscan.io/tx/0xda886f7533d7a3b59a1b806f7b0be55e2f0f8c6267735d51d4e9f369d8b5dd20"
+    },
+    {
+      "step": "S14-mint-3",
+      "txHash": "0x593c66501f5c961ee9dcef0d4c409ca1b79da13187f4de35529a2ff7c2f1ad60",
+      "gasUsed": "644959",
+      "url": "https://sepolia.etherscan.io/tx/0x593c66501f5c961ee9dcef0d4c409ca1b79da13187f4de35529a2ff7c2f1ad60"
+    },
+    {
+      "step": "S14-mint-4",
+      "txHash": "0xa1f0decc1149994def04a2ec4568927ca3b49524f6ae9be41137de06d62a478c",
+      "gasUsed": "644959",
+      "url": "https://sepolia.etherscan.io/tx/0xa1f0decc1149994def04a2ec4568927ca3b49524f6ae9be41137de06d62a478c"
+    },
+    {
+      "step": "S14-mint-5",
+      "txHash": "0xa1bd0deb0e1726d9b8070a57d2e4f47ec9522b8a65eb415453c5718595a378ef",
+      "gasUsed": "644959",
+      "url": "https://sepolia.etherscan.io/tx/0xa1bd0deb0e1726d9b8070a57d2e4f47ec9522b8a65eb415453c5718595a378ef"
+    },
+    {
+      "step": "S14-mint-6",
+      "txHash": "0xd654e72007f6c59c2bd112d8976f2791ebb77ca221c66e815288908d38ee334e",
+      "gasUsed": "644959",
+      "url": "https://sepolia.etherscan.io/tx/0xd654e72007f6c59c2bd112d8976f2791ebb77ca221c66e815288908d38ee334e"
+    },
+    {
+      "step": "S14-mint-7",
+      "txHash": "0x200050b4a89df9f798351ef0026cc46efca8fd23515698f5a7f47f8361ed7ae2",
+      "gasUsed": "644959",
+      "url": "https://sepolia.etherscan.io/tx/0x200050b4a89df9f798351ef0026cc46efca8fd23515698f5a7f47f8361ed7ae2"
+    },
+    {
+      "step": "S14-mint-8",
+      "txHash": "0xdf406d239a6302003211f3c443e20950443b20b6d2df8ab3611b027dabb22c7b",
+      "gasUsed": "644959",
+      "url": "https://sepolia.etherscan.io/tx/0xdf406d239a6302003211f3c443e20950443b20b6d2df8ab3611b027dabb22c7b"
+    },
+    {
+      "step": "S14-mint-9",
+      "txHash": "0xd6441c1e04fb989d3cce9c888979b5896d2b1b3b89f4587046965d61cc71a35a",
+      "gasUsed": "644959",
+      "url": "https://sepolia.etherscan.io/tx/0xd6441c1e04fb989d3cce9c888979b5896d2b1b3b89f4587046965d61cc71a35a"
+    },
+    {
+      "step": "S14-mint-10",
+      "txHash": "0x7ac745504079a04969c33e993350efc722eec93b150a4363c16864578e0febd1",
+      "gasUsed": "621727",
+      "url": "https://sepolia.etherscan.io/tx/0x7ac745504079a04969c33e993350efc722eec93b150a4363c16864578e0febd1"
+    },
+    {
+      "step": "S15",
+      "action": "NFT - Negative test: the 11th mint must revert (max supply = 10)"
+    },
+    {
+      "step": "S15a",
+      "txHash": "0x0bede24aa982a65ea17c4515c8fcf24b8dececa2762c258f68584135b4755918",
+      "gasUsed": "144467",
+      "url": "https://sepolia.etherscan.io/tx/0x0bede24aa982a65ea17c4515c8fcf24b8dececa2762c258f68584135b4755918"
+    },
+    {
+      "step": "S15b",
+      "txHash": "0xa140406a2c29b991bb56a941801e6b9dbaf87ba2c1b25f6268b8bc717e5f0a5f",
+      "gasUsed": "128349",
+      "url": "https://sepolia.etherscan.io/tx/0xa140406a2c29b991bb56a941801e6b9dbaf87ba2c1b25f6268b8bc717e5f0a5f"
+    },
+    {
+      "step": "S15c",
+      "expectedRevert": "max supply",
+      "actualRevert": "execution reverted: CampusMemo: max supply of 10 reached",
+      "matched": true
+    },
+    {
+      "step": "S16",
+      "action": "Final on-chain state"
+    }
+  ]
+}

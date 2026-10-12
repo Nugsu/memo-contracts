@@ -1,0 +1,29 @@
+# ---- secrets: never commit these -------------------------------------------
+.env
+.sepolia-wallet.json
+
+# ---- dependencies & build output -------------------------------------------
+node_modules/
+artifacts/
+cache/
+typechain-types/
+*.log
+
+# flattened Remix sources, regenerated with `npm run flatten`
+remix/
+
+# ---- local-only material, not part of the published source ------------------
+report/
+final/
+output/
+metadata/_*
+metadata/*.py
+metadata/campus-memo.png
+package-lock.json
+_check.txt
+你要做的事_操作指南.md
+
+# The deployment records ARE committed on purpose: they hold nothing but public
+# addresses and transaction hashes, and they are the evidence that the
+# contracts really ran.
+#   deployments.json, demo-results.json, verification.json

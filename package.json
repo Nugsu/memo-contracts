@@ -1,0 +1,19 @@
+{
+  "name": "memo-contracts",
+  "version": "1.0.0",
+  "private": true,
+  "description": "On-chain club loyalty system: an ERC-20 points token and a capped, soulbound ERC-721 commemorative",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "deploy:sepolia": "hardhat run scripts/deploy.js --network sepolia",
+    "demo:sepolia": "hardhat run scripts/demo.js --network sepolia",
+    "flatten": "hardhat flatten contracts/ClubPointsToken.sol > remix/ClubPointsToken_flat.sol && hardhat flatten contracts/CampusMemo.sol > remix/CampusMemo_flat.sol"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@openzeppelin/contracts": "5.0.2",
+    "dotenv": "^16.4.5",
+    "hardhat": "^2.22.10"
+  }
+}

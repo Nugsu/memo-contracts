@@ -1,0 +1,16 @@
+{
+  "network": "sepolia",
+  "chainId": 11155111,
+  "deployer": "0xCaD22D98a961Afc8A1350eAe841a08729F55FcCa",
+  "clubPointsToken": "0xC5A870AB5E317c82Ed962cCB1A95b7DAce4782DC",
+  "campusMemo": "0xa173e4E730DD46DED5a31964D4D5Dd6aCE9c89F9",
+  "tokenName": "Club Points Token",
+  "tokenSymbol": "CPT",
+  "nftName": "Campus Memo",
+  "nftSymbol": "CAMPUS-MEMO",
+  "deployedAt": "2026-10-11T16:06:21.931Z",
+  "explorer": {
+    "cpt": "https://sepolia.etherscan.io/address/0xC5A870AB5E317c82Ed962cCB1A95b7DAce4782DC",
+    "campusMemo": "https://sepolia.etherscan.io/address/0xa173e4E730DD46DED5a31964D4D5Dd6aCE9c89F9"
+  }
+}

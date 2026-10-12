@@ -1,0 +1,32 @@
+{
+  "name": "Campus-Memo — Drone Club Commemorative",
+  "description": "A limited-edition commemorative NFT of the Drone Club. Only 10 will ever exist, and each one consumed 100 CPT club points to mint. This token is a proof of membership and is non-transferable (soulbound) — it stays with the member who earned it.",
+  "image": "https://gist.githubusercontent.com/Nugsu/40b698a04166106f2223c2d13ddec1af/raw/campus-memo.svg",
+  "external_url": "https://github.com/Nugsu/memo-contracts",
+  "attributes": [
+    {
+      "trait_type": "Club",
+      "value": "Drone Club"
+    },
+    {
+      "trait_type": "Collection",
+      "value": "Campus-Memo"
+    },
+    {
+      "trait_type": "Edition",
+      "value": "Commemorative"
+    },
+    {
+      "trait_type": "Max Supply",
+      "value": 10
+    },
+    {
+      "trait_type": "Mint Cost",
+      "value": "100 CPT"
+    },
+    {
+      "trait_type": "Transferable",
+      "value": "No - Soulbound"
+    }
+  ]
+}

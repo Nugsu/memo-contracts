@@ -1,0 +1,138 @@
+{
+  "verifiedAt": "2026-10-11T16:13:33.197Z",
+  "clubPointsToken": "0xC5A870AB5E317c82Ed962cCB1A95b7DAce4782DC",
+  "campusMemo": "0xa173e4E730DD46DED5a31964D4D5Dd6aCE9c89F9",
+  "deployer": "0xCaD22D98a961Afc8A1350eAe841a08729F55FcCa",
+  "checkpoints": [
+    {
+      "id": "T3",
+      "action": "admin: fundRewardPool(100e18)",
+      "block": 11892812,
+      "before": {
+        "rewardPool": "0.0",
+        "cptTotalSupply": "1000.0"
+      },
+      "after": {
+        "rewardPool": "100.0",
+        "cptTotalSupply": "1000.0"
+      },
+      "verdict": "PASS"
+    },
+    {
+      "id": "T4",
+      "action": "member: dailyCheckIn()",
+      "block": 11892813,
+      "before": {
+        "aliceCpt": "0.0",
+        "rewardPool": "100.0",
+        "cptTotalSupply": "1000.0"
+      },
+      "after": {
+        "aliceCpt": "10.0",
+        "rewardPool": "90.0",
+        "cptTotalSupply": "1000.0"
+      },
+      "cooldownSeconds": "86400",
+      "verdict": "PASS"
+    },
+    {
+      "id": "T9",
+      "action": "member: redeemPoints(5e18)",
+      "block": 11892816,
+      "before": {
+        "aliceCpt": "160.0",
+        "cptTotalSupply": "1600.0"
+      },
+      "after": {
+        "aliceCpt": "155.0",
+        "cptTotalSupply": "1595.0"
+      },
+      "verdict": "PASS"
+    },
+    {
+      "id": "T11",
+      "action": "member: CampusMemo.mint(uri)",
+      "block": 11892818,
+      "before": {
+        "aliceCpt": "155.0",
+        "cptTotalSupply": "1595.0",
+        "nftTotalSupply": "0"
+      },
+      "after": {
+        "aliceCpt": "55.0",
+        "cptTotalSupply": "1495.0",
+        "nftTotalSupply": "1"
+      },
+      "ownerOf0": "0xB7B8489a40a298EA306c5B46135927D51853F30A",
+      "tokenURI0": "https://gist.githubusercontent.com/Nugsu/40b698a04166106f2223c2d13ddec1af/raw/campus-memo.json",
+      "verdict": "PASS"
+    },
+    {
+      "id": "T14",
+      "action": "admin: 9 x CampusMemo.mint(uri)",
+      "block": 11892829,
+      "after": {
+        "nftTotalSupply": "10",
+        "nftRemaining": "0"
+      },
+      "verdict": "PASS"
+    },
+    {
+      "id": "T15",
+      "action": "admin: 11th CampusMemo.mint(uri)",
+      "block": 11892830,
+      "revertedWith": "execution reverted: CampusMemo: max supply of 10 reached",
+      "verdict": "PASS"
+    },
+    {
+      "id": "FINAL",
+      "action": "read all state",
+      "block": 11892840,
+      "values": {
+        "cptTotalSupply": "695.0",
+        "rewardPool": "90.0",
+        "nftTotalSupply": "10",
+        "nftRemaining": "0",
+        "adminCpt": "100.0",
+        "aliceCpt": "55.0",
+        "bobCpt": "450.0",
+        "carolCpt": "0.0",
+        "aliceRedeemed": "5.0",
+        "aliceNft": "1",
+        "adminNft": "9"
+      }
+    }
+  ],
+  "negativeCases": [
+    {
+      "step": "S5",
+      "expected": "already checked in today",
+      "actual": "execution reverted: CPT: already checked in today",
+      "matched": true
+    },
+    {
+      "step": "S8",
+      "expected": "not an administrator",
+      "actual": "execution reverted: CPT: caller is not an administrator",
+      "matched": true
+    },
+    {
+      "step": "S12",
+      "expected": "not enough CPT",
+      "actual": "execution reverted: CampusMemo: not enough CPT",
+      "matched": true
+    },
+    {
+      "step": "S13b",
+      "expected": "non-transferable",
+      "actual": "execution reverted: CampusMemo: commemorative NFTs are non-transferable",
+      "matched": true
+    },
+    {
+      "step": "S15c",
+      "expected": "max supply",
+      "actual": "execution reverted: CampusMemo: max supply of 10 reached",
+      "matched": true
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <title>Campus-Memo — Drone Club Commemorative</title>
+  <desc>Limited-edition commemorative NFT of the Drone Club. Max supply 10. Non-transferable (soulbound).</desc>
+
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="42%" r="78%">
+      <stop offset="0%" stop-color="#12684f"/>
+      <stop offset="55%" stop-color="#07402e"/>
+      <stop offset="100%" stop-color="#031e18"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1024" height="1024" fill="url(#bg)"/>
+
+  <!-- concentric frames -->
+  <circle cx="512" cy="512" r="484" fill="none" stroke="#c9a85a" stroke-width="6"/>
+  <circle cx="512" cy="512" r="470" fill="none" stroke="#ecd8a3" stroke-width="2"/>
+
+  <!-- header -->
+  <g font-family="Arial, Helvetica, sans-serif" fill="#ecd8a3" text-anchor="middle">
+    <text x="512" y="146" font-size="44" font-weight="700" letter-spacing="7">DRONE CLUB</text>
+  </g>
+  <line x1="312" y1="180" x2="712" y2="180" stroke="#c9a85a" stroke-width="2"/>
+  <g font-family="Arial, Helvetica, sans-serif" fill="#b0c8ba" text-anchor="middle">
+    <text x="512" y="210" font-size="18" letter-spacing="3">ON-CHAIN CLUB LOYALTY</text>
+  </g>
+
+  <!-- emblem -->
+  <circle cx="512" cy="430" r="168" fill="none" stroke="#c9a85a" stroke-width="3"/>
+  <circle cx="512" cy="430" r="152" fill="none" stroke="#ecd8a3" stroke-width="1"/>
+
+  <!-- quadcopter -->
+  <g stroke="#c9a85a" stroke-width="6" stroke-linecap="round">
+    <line x1="512" y1="430" x2="380" y2="298"/>
+    <line x1="512" y1="430" x2="644" y2="298"/>
+    <line x1="512" y1="430" x2="380" y2="562"/>
+    <line x1="512" y1="430" x2="644" y2="562"/>
+  </g>
+  <g fill="none" stroke="#ecd8a3" stroke-width="4">
+    <ellipse cx="380" cy="298" rx="38" ry="11"/>
+    <ellipse cx="644" cy="298" rx="38" ry="11"/>
+    <ellipse cx="380" cy="562" rx="38" ry="11"/>
+    <ellipse cx="644" cy="562" rx="38" ry="11"/>
+  </g>
+  <g fill="#c9a85a">
+    <circle cx="380" cy="298" r="12"/>
+    <circle cx="644" cy="298" r="12"/>
+    <circle cx="380" cy="562" r="12"/>
+    <circle cx="644" cy="562" r="12"/>
+  </g>
+  <rect x="470" y="396" width="84" height="68" rx="18" fill="#f6f1e5" stroke="#c9a85a" stroke-width="4"/>
+  <circle cx="512" cy="448" r="16" fill="#07402e" stroke="#c9a85a" stroke-width="3"/>
+  <circle cx="512" cy="448" r="6" fill="#ecd8a3"/>
+  <circle cx="512" cy="414" r="8" fill="#c9a85a"/>
+
+  <!-- title block -->
+  <g font-family="Georgia, 'Times New Roman', serif" fill="#f6f1e5" text-anchor="middle">
+    <text x="512" y="696" font-size="62" font-weight="700" letter-spacing="2">CAMPUS-MEMO</text>
+  </g>
+  <line x1="362" y1="740" x2="662" y2="740" stroke="#c9a85a" stroke-width="2"/>
+  <g font-family="Arial, Helvetica, sans-serif" text-anchor="middle">
+    <text x="512" y="771" font-size="22" font-weight="700" fill="#c9a85a" letter-spacing="5">LIMITED EDITION COMMEMORATIVE</text>
+    <text x="512" y="827" font-size="34" font-weight="700" fill="#ecd8a3" letter-spacing="4">1 OF 10 &#183; SOULBOUND</text>
+    <text x="512" y="904" font-size="20" fill="#b0c8ba" letter-spacing="4">SEPOLIA TESTNET &#183; MMXXVI</text>
+  </g>
+</svg>
